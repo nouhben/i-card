@@ -8,10 +8,9 @@ class Challenge extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Center(
-          child: Image(
-            width: 100.0,
-            height: 100.0,
-            image:
+          child: CircleAvatar(
+            radius: 50.0,
+            backgroundImage:
                 AssetImage('images/man-playing-guitar-with-girl-3450887.jpg'),
           ),
         ),
