@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Challenge extends StatelessWidget {
+  final _fontFmilyName = 'Montserrat';
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,53 +22,60 @@ class Challenge extends StatelessWidget {
             color: Colors.white,
             fontSize: 45.0,
             fontWeight: FontWeight.w900,
+            fontFamily: _fontFmilyName + '-Black',
           ),
         ),
         SizedBox(height: 5.0),
         Text(
           'Flutter Developer',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.teal.shade100,
             fontSize: 25.0,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.bold,
             letterSpacing: 2.0,
+            fontFamily: 'Montserrat',
           ),
         ),
         Container(
-          margin: EdgeInsets.only(top: 3.0),
+          margin: EdgeInsets.only(top: 5.0),
           height: 2.0,
-          width: 250.0,
+          width: 200.0,
           color: Colors.white,
         ),
-        Container(
+        Card(
           color: Colors.white,
-          margin: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
-          padding: EdgeInsets.all(10.0),
-          child: Row(
-            children: [
-              Icon(
-                Icons.call,
-                size: 25.0,
-                color: Colors.teal,
-              ),
-              SizedBox(width: 10.0),
-              Text(
-                '+213-541-199-915',
-                style: TextStyle(
+          margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(
+                  Icons.call,
+                  size: 25.0,
                   color: Colors.teal,
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2.0,
                 ),
-              ),
-            ],
+                SizedBox(width: 10.0),
+                Text(
+                  '+213-541-199-915',
+                  style: TextStyle(
+                    color: Colors.teal,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: _fontFmilyName,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         Container(
           color: Colors.white,
-          margin: EdgeInsets.symmetric(horizontal: 50.0, vertical: 0.0),
+          margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
           padding: EdgeInsets.all(10.0),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(
                 Icons.email,
@@ -81,7 +89,8 @@ class Challenge extends StatelessWidget {
                   color: Colors.teal,
                   fontSize: 15.0,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: 2.0,
+                  letterSpacing: 2.5,
+                  fontFamily: _fontFmilyName,
                 ),
               ),
             ],
